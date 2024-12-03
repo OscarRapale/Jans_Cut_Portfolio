@@ -1,11 +1,19 @@
 import { Box, Grid, Text } from "@chakra-ui/react";
 
 const services = [
-  { name: "Service 1", duration: "30 min", price: "$20" },
-  { name: "Service 2", duration: "30 min", price: "$20" },
-  { name: "Service 3", duration: "30 min", price: "$20" },
-  { name: "Service 4", duration: "30 min", price: "$20" },
-  { name: "Service 5", duration: "30 min", price: "$20" },
+  { name: "Corte", duration: "35-40 minutos", price: "$20" },
+  { name: "Corte con barba", duration: "45 minutos", price: "$25" },
+  { name: "Corte con afeitado de cara", duration: "45 minutos", price: "$25" },
+  { name: "Corte con diseño", duration: "40-45 minutos", price: "$25" },
+  { name: "Cerquillo", duration: "30-35 minutos", price: "$15" },
+  { name: "Arreglo de barba", duration: "10-15 minutos", price: "$12" },
+  { name: "Afeitado y arreglo de barba", duration: "25 minutos", price: "$15" },
+  {
+    name: "Corte con lavado y secado de cabello",
+    duration: "45 minutos",
+    price: "$30",
+  },
+  { name: "Platinado con corte", duration: "4 horas aprox.", price: "$120" },
 ];
 
 const ServiceGrid = () => {
@@ -19,9 +27,16 @@ const ServiceGrid = () => {
           color="white"
           textAlign="center"
           borderRadius="md"
-          border="1px solid white"
+          border="2px solid white"
+          width="250px"
+          height="160px"
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
         >
-          <Text fontWeight="bold">{service.name}</Text>
+          <Text fontWeight="bold" whiteSpace="pre-wrap" overflow="hidden">
+            {service.name}
+          </Text>
           <Text>{service.duration}</Text>
           <Text>{service.price}</Text>
         </Box>

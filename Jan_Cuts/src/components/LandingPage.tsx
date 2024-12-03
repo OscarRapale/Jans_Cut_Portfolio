@@ -2,6 +2,7 @@ import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 import ServiceGrid from "./ServiceGrid";
 import logoCardSvg from "../assets/logo-card.svg";
 import janCutsHeadingSvg from "../assets/jan-cuts-header.svg";
+import GalleryGrid from "./GalleryGrid";
 
 const LandingPage = () => {
   return (
@@ -43,14 +44,15 @@ const LandingPage = () => {
             fontFamily="'Helvetica', 'Arial', sans-serif"
             mb={4}
           >
-            Slogan Placeholder
+            Jan Luis Rapale Méndez
           </Heading>
-          <Text mb={8} fontFamily="'Helvetica', 'Arial', sans-serif">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
-            provident minima enim, <br />
-            quod perferendis iste. Suscipit est magnam vel sequi asperiores
-            quibusdam id accusamus? <br />
-            Ea, quibusdam? Optio labore architecto laudantium!
+          <Text
+            mb={8}
+            fontSize="lg"
+            fontFamily="'Helvetica', 'Arial', sans-serif"
+          >
+            Dirección: 34-62 Calle Central, Coto Laurel, PR 00780 <br />
+            Horarios: Martes-Sábado de 8am-6pm <br />
           </Text>
           <ServiceGrid />
         </Box>
@@ -58,6 +60,15 @@ const LandingPage = () => {
           <Image src={logoCardSvg} alt="Jan Cuts Logo" />
         </Box>
       </Flex>
+      <Heading
+        textAlign="center"
+        mt="10rem"
+        mb="5rem"
+        fontFamily="'Helvetica', 'Arial', sans-serif"
+      >
+        Portfolio
+      </Heading>
+      <GalleryGrid />
     </Box>
   );
 };
