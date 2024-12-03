@@ -1,5 +1,6 @@
 import { Box, Grid, Image } from "@chakra-ui/react";
 
+// Picture array
 const portfolioPictures = [
   { title: "picture 1", imageUrl: "portfolio-1.jpg" },
   { title: "picture 2", imageUrl: "portfolio-2.jpg" },
@@ -9,17 +10,18 @@ const portfolioPictures = [
   { title: "picture 6", imageUrl: "portfolio-6.jpg" },
   { title: "picture 7", imageUrl: "portfolio-7.jpg" },
   { title: "picture 8", imageUrl: "portfolio-8.jpg" },
+  { title: "picture 9", imageUrl: "portfolio-9.jpg" },
 ];
 
 const GalleryGrid = () => {
   return (
-    <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap={4}>
+    <Grid templateColumns={{ base: "1fr",  sm: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }} gap={4}>
       {portfolioPictures.map((picture) => (
         <Box
           key={picture.title}
           p={4}
-          ml="10rem"
-          width="250px"
+          ml={{ base: "2rem", md: "10rem" }}
+          width="260px"
           height="250px"
           display="flex"
           flexDirection="column"
@@ -33,6 +35,11 @@ const GalleryGrid = () => {
             height="100%"
             objectFit="cover"
             mb={4}
+            borderRadius="md"
+            transition="transform 0.3s"
+            _hover={{
+              transform: "scale(1.25)",
+            }}
           />
         </Box>
       ))}

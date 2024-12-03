@@ -1,5 +1,6 @@
 import { Box, Grid, Text } from "@chakra-ui/react";
 
+// services array
 const services = [
   { name: "Corte", duration: "35-40 minutos", price: "$20" },
   { name: "Corte con barba", duration: "45 minutos", price: "$25" },
@@ -18,10 +19,11 @@ const services = [
 
 const ServiceGrid = () => {
   return (
-    <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={4}>
+    <Grid templateColumns={{ base: "1fr", sm: "repeat(2, 1fr)",  md: "repeat(3, 1fr)" }} gap={4}>
       {services.map((service) => (
         <Box
           key={service.name}
+          ml={{ base: "2rem", md: "0px" }}
           p={4}
           bg="black"
           color="white"
@@ -33,8 +35,9 @@ const ServiceGrid = () => {
           display="flex"
           flexDirection="column"
           justifyContent="center"
+          fontFamily="'Helvetica', 'Arial', sans-serif"
         >
-          <Text fontWeight="bold" whiteSpace="pre-wrap" overflow="hidden">
+          <Text  fontWeight="bold" whiteSpace="pre-wrap" overflow="hidden">
             {service.name}
           </Text>
           <Text>{service.duration}</Text>
