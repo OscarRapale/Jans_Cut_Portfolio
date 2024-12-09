@@ -57,6 +57,7 @@ const LandingPage = () => {
               34-62 Calle Central, Coto Laurel, PR 00780 <br />
             </Link>
             Horarios: Martes a Sábado de 8am-6pm <br />
+            Citas: 787-909-7243
           </Text>
 
           {/* Services Section */}
